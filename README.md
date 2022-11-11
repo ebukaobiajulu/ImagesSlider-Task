@@ -2,4 +2,3 @@
 
 This project is to create an image carousel using HTML, CSS and Javascript
 
-Here is the published link

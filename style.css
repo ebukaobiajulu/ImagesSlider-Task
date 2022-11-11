@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+}
+
+img,
+picture {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slides {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel {
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.slides,
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+  animation: visibility 0.2s;
+}
+
+/* Navigation Buttons */
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  z-index: 10;
+  transition: 0.3s all ease-in-out;
+  transform: translateY(-50%);
+}
+
+.previous {
+  left: 1%;
+}
+.next {
+  right: 1%;
+}
+
+/* Buttons on hover */
+.carousel:hover button {
+  opacity: 0.8;
+}
+
+/* Slider animation */
+@keyframes visibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}
+
+/* Media Query */
+@media screen and (max-width: 600px) {
+  button {
+    width: 25px;
+  }
+}
