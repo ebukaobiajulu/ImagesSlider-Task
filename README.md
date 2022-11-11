@@ -2,3 +2,6 @@
 
 This project is to create an image carousel using HTML, CSS and Javascript
 
+Here's the link to the published site
+https://ebukaobiajulu.github.io/ImagesSlider-Task/
+
